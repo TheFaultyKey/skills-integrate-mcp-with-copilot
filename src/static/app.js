@@ -1,4 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Joke of the Day
+  const jokes = [
+    "Why don't scientists trust atoms? Because they make up everything!",
+    "I told my computer I needed a break. Now it won't stop sending me Kit-Kat ads.",
+    "Why do programmers prefer dark mode? Because light attracts bugs!",
+    "How many programmers does it take to change a light bulb? None — that's a hardware problem.",
+    "Why did the student eat his homework? Because the teacher told him it was a piece of cake!",
+    "I'm reading a book about anti-gravity. It's impossible to put down.",
+    "Why can't you give Elsa a balloon? Because she'll let it go.",
+    "What do you call cheese that isn't yours? Nacho cheese!",
+    "Why did the bicycle fall over? Because it was two-tired.",
+    "What do you call a fish without eyes? A fsh.",
+    "Why did the math book look so sad? Because it had too many problems.",
+    "What do you call a fake noodle? An impasta!",
+    "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "I asked the librarian if the library had books about paranoia. She whispered, 'They're right behind you!'",
+    "Why don't eggs tell jokes? Because they'd crack each other up."
+  ];
+
+  function displayJokeOfTheDay() {
+    const jokeText = document.getElementById("joke-text");
+    const now = new Date();
+    const dayOfYear = Math.floor(
+      (now - new Date(now.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24)
+    );
+    jokeText.textContent = jokes[dayOfYear % jokes.length];
+  }
+
+  displayJokeOfTheDay();
+
   const activitiesList = document.getElementById("activities-list");
   const activitySelect = document.getElementById("activity");
   const signupForm = document.getElementById("signup-form");
