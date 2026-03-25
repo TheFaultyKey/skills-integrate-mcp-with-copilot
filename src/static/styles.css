@@ -198,3 +198,25 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+#joke-container {
+  background-color: #fffde7;
+  border-left: 4px solid #f9a825;
+  max-width: 100%;
+}
+
+#joke-container h3 {
+  color: #f57f17;
+  border-bottom-color: #ffe082;
+}
+
+#joke-display {
+  padding: 10px 5px;
+}
+
+#joke-text {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #555;
+  line-height: 1.8;
+}
